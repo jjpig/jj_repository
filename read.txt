@@ -4,4 +4,8 @@ Counting objects: 19, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (19/19), done.
 Writing objects: 100% (19/19), 13.73 KiB, done.
+C
+D
+D
+Creating a new branch is quick &simple
 
