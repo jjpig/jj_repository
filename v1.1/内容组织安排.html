@@ -5,22 +5,38 @@
     <link rel="stylesheet" type="text/css" href="css.css" />
     <title>网路编程精品课程</title>
     <style>
-        th{
-            background: #87cefa;
+        .tm-table{
+            border: 1px solid #000000;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            width:98%;
+            height: auto;
+            text-align: left !important;
+            margin-left:0.5%;
+        }
+        .tm-table td,th{
+            border: 1px solid #000000;
+            vertical-align: middle !important;
+            font-size: 14px;
+        }
+        .tm-table th{
+            background: #e9f1fe;
             text-align: left !important;
             padding-right: 10px;
-            width: 180px;
-            font-size: 16px;
-            height: 30px;
-            vertical-align: middle;
         }
-
-        td{
-            vertical-align: middle !important;
+        .tm-table tr{
+            height:50px;
+        }
+        .tm-table td{
+            background: #FFFFFF;
+            height:40px;
+            padding-left: 5px;
+            text-align: left !important;
         }
     </style>
 </head>
 <body>
+
 <!--顶部导航栏-->
 <div class="header">
     <div class="logo_img"><a href="index.html"><img alt="Site Name" src="images/logo-np.png"></a></div></div>
@@ -48,15 +64,14 @@
                 </ul>
             </div>
         </li>
-        <li><a href="教学条件.html">教学条件</a>
-            <div>
-                <ul>
-                    <li><a href="教学条件.html">教学教材</a></li>
-                    <li><a href="教学资料.html">教学资料</a></li>
-                    <li><a href="实践教学条件.html">实践教学条件</a></li>
-                    <li><a href="网络教学环境.html">网络教学环境</a></li>
-                </ul>
-            </div>
+        <li><a href="教学条件.html">教学条件</a><div>
+            <ul>
+                <li><a href="教学条件.html">教学教材</a></li>
+                <li><a href="教学资料.html">教学资料</a></li>
+                <li><a href="实践教学条件.html">实践教学条件</a></li>
+                <li><a href="网络教学环境.html">网络教学环境</a></li>
+            </ul>
+        </div>
         </li>
         <li><a href="教学效果与成果.html">教学效果与成果</a>
             <div>
@@ -78,7 +93,7 @@
                 </ul>
             </div>
         </li>
-       <li><a href="网络学堂.html">网络学堂</a>
+        <li><a href="#">网络学堂</a>
             <div>
                 <ul>
                     <li><a href="教学大纲.html">教学大纲</a></li>
@@ -94,22 +109,25 @@
 </div>
 <!--顶部导航栏完-->
 
+
+
+
 <div style="width:1000px;margin: 0 auto;margin-top:10px;">
     <div class="linktree">
         <a href="index.html">首页</a>
-        &raquo; <a href="#">授课教案</a>
+        &raquo; <a href="#">教学队伍</a>
     </div>
     <div id="notification"></div>
     <div id="column-left">
 
         <!--侧边导航栏-->
         <div class="box">
-            <div class="box-heading_left">网络学堂</div>
+            <div class="box-heading_left">教学内容</div>
             <div class="box-content" style="background:none;border:none;">
                 <div class="box-category">
                     <ul>
                         <li>
-                            <a href="教学大纲.html">教学大纲</a>
+                            <a href="理论课程.html">理论课程</a>
                             <ul>
                                 <li>
                                     <a href="#"> - PC (0)</a>
@@ -120,7 +138,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="授课教案.html">授课教案</a>
+                            <a href="#">实验课程</a>
                             <ul>
                                 <li>
                                     <a href="#"> - Macs (0)</a>
@@ -131,7 +149,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="课程视频.html">课程视频</a>
+                            <a href="内容组织安排.html">内容组织安排</a>
                             <ul>
                                 <li>
                                     <a href="#"> - Mice and Trackballs (0)</a>
@@ -151,13 +169,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">在线测试</a>
-                        </li>
-                        <li>
-                            <a href="学习指南.html">学习指南</a>
-                        </li>
-                        <li>
-                            <a href="#">实验教学</a>
+                            <a href="课程重点难点.html">课程重点难点</a>
                         </li>
                     </ul>
                 </div>
@@ -169,54 +181,122 @@
     <!--简介栏-->
     <div id="content">
         <div class="category-info">
-
-            <!--<div class="image"><img src="images/d.jpg" alt="MP3 Players" /></div>-->
-            <div class="pagetitle">授课课件</div><br/>
-            <table width="100%" border="0" cellpadding="5" cellspacing="0" id="Table4">
-                <tbody>
+            <h1 style="color: #ff0000; text-align: center;">内容组织安排</h1><br/>
+             <p class="pagetitle">一、授课安排</p><br/>
+            <p class="pargraph">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《高级网络编程》课程课堂授课40学时。考虑到授课、教学互动、提高研究生课题研究水平，课程班安排在40～80人为佳。综合考虑学生的认知过程及理解过程，以及研究生培养方式以学术研究为主课程指导为辅，所以每次安排2个学时，每周两次课。
+            </p><br/>
+              <p class="pagetitle">二、辅助教学</p><br/>
+            <table class="tm-table">
                 <tr>
-                    <th>目 录</th>
-                    <th>概 述</th>
-                </tr>
-                <tr>
-                    <td width="300" height="37" valign="top" bgcolor="#ffffff" style="HEIGHT: 37px"><a href= "#" style="TEXT-DECORATION:underline; font-size: 14px">第一章-网络基础</a><font face="宋体">(PPT)</font></td>
-                    <td valign="top" bgcolor="#ffffff" style="HEIGHT: 37px">
-                        讲述什么网路技术的起源于发展，网络的七层模型结构，TCP/IP基础知识</td>
+                    <th width="20%">作业:</th>
+                    <td>每一章节讲解结束后会有课后作业，作业都是实际编程操作，在编程过程中让学生理解课堂内容。</td>
                 </tr>
                 <tr>
-                    <td height="45" valign="top"><a href="#" style="TEXT-DECORATION:underline">第二章-套接口基础</a><font face="宋体">(PPT)</font></td>
-                    <td valign="top">讲述套接字基础，套接字结构，套机字应用程序接口，TCP C/S模型并举例，UDP C/S模型并举例，域名与IP地址相互转换。</td>
+                    <th width="20%">考核:</th>
+                    <td>以课堂出勤，课后作业，最后的课程设计三部分组成，课程设计以小组为单位分工完成。课程设计题目难度各不同，学生可以根据自己情况选择。</td>
                 </tr>
                 <tr>
-                    <td height="41" valign="top" bgcolor="#ffffff"><a href="#" style="TEXT-DECORATION:underline">第三章-并发服务器</a><font face="宋体">(PPT)</font></td>
-                    <td valign="top" bgcolor="#ffffff">讲述服务器分类技术， 进程与线程， 多进程服务器， 多线程服务器。</td>
+                    <th width="20%">答疑:</th>
+                    <td>本课程不专门安排答疑课，学生可以在课堂上或者下课后提出问题，老师当场解答。老师会留下通信方式，以便课后解决学生疑问。</td>
                 </tr>
-                 <tr>
-                    <td height="41" valign="top" bgcolor="#ffffff"><a href="#" style="TEXT-DECORATION:underline">第四章-I/O复用与套接口选项</a><font face="宋体">(PPT)</font></td>
-                    <td valign="top" bgcolor="#ffffff"> I/O模型， I/O复用概念， Select和Pselect机制， 套接字选项， 非阻塞I/O，信号驱动I/O</td>
+            </table><br/>
+            <p class="pagetitle">三、教材及学时安排</p><br/>
+            <table class="tm-table">
+                <tr>
+                    <th width="20%">学时安排:</th>
+                    <td>授课40个学时</td>
                 </tr>
                 <tr>
-                    <td height="36" valign="top" bgcolor="#ffffff"><a href="#" style="TEXT-DECORATION:underline">第五章-高级套接字编程</a><font face="宋体">(PPT)</font></td>
-                    <td valign="top" bgcolor="#ffffff">高级名字与地址函数， 高级I/O函数， 高级UDP套接字编程， 带外数据</td>
+                    <th width="20%">教材:</th>
+                    <td>《UNIX网络编程(卷1)》&nbsp;&nbsp;W.RICHARD STEVENS, BILL FENNER, ANDREW M. RUDOFF&nbsp;&nbsp;清华大学出版社</td>
+                </tr>
+            </table><br/>
+            <p class="pagetitle">四、教学内容</p><br/>
+            <table class="tm-table">
+                <tr>
+                    <th width="40%">教学大纲</th>
+                    <th>具体内容</th>
                 </tr>
                 <tr>
-                    <td height="33" valign="top"><a href="./kejian/嵌入式系统及应用-Chapter6-同步、互斥 与通信.ppt" style="TEXT-DECORATION:underline">第六章-原始套接字与数据链路访问</a><font face="宋体">(PPT)</font></td>
-                    <td valign="top">讲述TCP/IP协议族结构， IP数据报格式， 原始套接字， 一个简单的DOS攻击程序， Ping协议的ICMP版本， Traceroute程序， 数据链路层访问技术， 一个数据链路访问的例子。</td>
+                    <td>第一讲、网络基础</td>
+                    <td>
+                        1.Foundation of NET<br/>
+                        2.OSI/RM<br/>
+                        3.TCP/IP
+                    </td>
                 </tr>
                 <tr>
-                    <td height="33" valign="top"><a href="./kejian/嵌入式系统及应用-Chapter7-中断管理.ppt" style="TEXT-DECORATION:underline">第七讲-守护进程与其他网络服务器编程技术</a><font face="宋体">(PPT)</font></td>
-                    <td valign="top"><span style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">守护进程和inetd超级服务器， 各种并发服务器模型比较</span></td>
+                    <td>第二讲、套接口基础</td>
+                    <td>
+                        1.Basic of Sockets<br/>
+                        2.Structure of Sockets<br/>
+                        3.Socket APIs<br/>
+                        4.TCP C/S example<br/>
+                        5.UDP C/S example<br/>
+                        6.Name and Address Conversions
+                    </td>
                 </tr>
-                </tbody></table>ß
+                <tr>
+                    <td>第三讲、并发服务器</td>
+                    <td>
+                        1.服务器分类技术<br/>
+                        2.进程与线程<br/>
+                        3.多进程服务器<br/>
+                        4.多线程服务器
+                    </td>
+                </tr>
+                <tr>
+                    <td>第四讲、I-O复用与套接口选项</td>
+                    <td>
+                        1.I/O Models<br/>
+                        2.I/O multiplexing concept<br/>
+                        3.Select and pselect functions<br/>
+                        4.Socket options<br/>
+                        5.Nonblocking IO<br/>
+                        6.Signal-driven IO
+                    </td>
+                </tr>
+                <tr>
+                    <td>第五讲、高级套接字编程</td>
+                    <td>
+                        1.高级名字与地址函数<br/>
+                        2.高级i/o函数<br/>
+                        3.高级udp套接字编程<br/>
+                        4.带外数据
+                    </td>
+                </tr>
+                <tr>
+                    <td>第六讲、原始套接字与数据链路访问</td>
+                    <td>
+                        1.TCP/IP协议族结构<br/>
+                        2.IP数据报格式<br/>
+                        3.原始套接字<br/>
+                        4.一个简单的DOS攻击程序<br/>
+                        5.Ping协议的ICMP版本<br/>
+                        6.Traceroute程序<br/>
+                        7.数据链路层访问技术<br/>
+                        8.一个数据链路访问的例子
+                    </td>
+                </tr>
+                <tr>
+                    <td>第七讲、守护进程与其他网络服务器编程技术</td>
+                    <td>
+                        1.守护进程和inetd超级服务器<br/>
+                        2.几种服务器技术的比较
+                    </td>
+                </tr>
+            </table>
             <br/>
-
+            </br>
+            </br>
+            </br>
+            </br>
         </div>
         <!--简介栏完-->
-
     </div>
 
 </div>
-
 
 <div class="clearfix"></div>
 <div class="icart-footer-bottom">
@@ -229,5 +309,4 @@
     </div>
 </div>
 </body>
-
 </html>
