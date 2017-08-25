@@ -1,0 +1,139 @@
+.mz-baseinfo {
+
+  padding: 40px;
+  font-family: 'SourceHanSansCN-Normal', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  // color: #D4D4D4;
+
+  table{
+    input{
+      width: 100%;
+      display: inline-block;
+      border-radius: 4px;
+      border: 1px solid #bfcbd9;
+      box-sizing: border-box;
+      color: #1f2d3d;
+      padding: 3px 10px;
+      transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+    }
+
+    select{
+      font-size: 12px !important;
+      background-color: #fff;
+      border-radius: 4px;
+      border: 1px solid #bfcbd9;
+      box-sizing: border-box;
+      color: #1f2d3d;
+      display: inline-block;
+      font-size: inherit;
+      height: 23px;
+      line-height: 1;
+      outline: none;
+      padding: 3px 10px;
+      transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+      width: 100%
+    }
+
+    ul {
+      li {
+        float: left;
+        margin: 20px;
+      }
+    }
+  }
+
+  .btn-box {
+    // position: absolute;
+    // left: 200px;
+    // right: 40px;
+    // bottom: 0;
+    // height: 60px;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 40px;
+    button{
+        width: 100px;
+        height: 25px;
+        color: #FFF;
+        border: none;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .save{
+      background: rgba(30, 189, 154, 1);
+      margin-right: 10px; 
+    }
+
+    .close{
+      background: rgba(219, 80, 60, 1);
+    }
+  }
+
+  .title {
+    text-align: center;
+    h2 {
+      font-weight:normal;
+      display: inline-block;
+      border-bottom: 1px solid #000;
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+  .baseinfo-box {
+    border: 1px solid #ccc;
+    width: 80%;
+    margin:0 auto;
+    
+
+    div:nth-child(1) {
+      position: relative;
+      h2 {
+        color: orange;
+        font-weight: normal;
+        // margin: 10px;
+        // padding: 10px;
+        border-bottom: 1px solid orange;
+        float: left;
+      }
+      h3 {
+        float: right;
+        font-weight: normal;
+        // margin-top: 50px;
+      }
+    }
+    .baseinfo-content {
+      width: 90%;
+      margin: 10px auto;
+      background: pink;
+    }
+    .enclosure-info {
+      margin: 10px auto;
+      h2 {
+        color: #9DD60D;
+        font-weight: normal;
+        margin: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #9DD60D;
+        display: inline-block;
+      }
+      .info {
+        width: 90%;
+        margin: 10px auto;
+        background: skyblue;
+        ul {
+          li {
+            float: left;
+            margin: 20px;
+          }
+        }
+        .file-name {
+          border: 1px solid #aaa;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}

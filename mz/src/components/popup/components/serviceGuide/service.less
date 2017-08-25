@@ -1,0 +1,123 @@
+.guide {
+  height: 560px;
+  overflow: hidden;
+
+  .guide-top{
+  	height: 50px;
+  	background-color: rgba(243, 243, 243, 1);
+
+  	p{
+  		font-family: 'SourceHanSansCN-Normal', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+	    font-weight: 400;
+	    font-style: normal;
+	    font-size: 18px;
+	    color: #888888;
+	    padding:10px 0px;
+  	}
+
+  	span{
+  		padding: 40px;
+  		height: 33px;
+  		line-height: 20px;
+  		font-family: 'SourceHanSansCN-Medium', 'Source Han Sans CN Medium', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+	    font-weight: 500;
+	    font-style: normal;
+	    font-size: 20px;
+	    color: #8099E4;
+  	}
+
+  	.code{
+  		font-size: 16px;
+  	}
+  }
+
+  .guide-content{
+  	.content-left{
+  		overflow-y: scroll;
+      ::-webkit-scrollbar-track-piece{
+        background: #FFFFFF;
+      }
+      ::-webkit-scrollbar-thumb:vertical{
+        background-color: #C2C2C2;
+      }
+  		position: absolute;
+  		left: 0px;
+  		top: 90px;
+  		bottom: 10px;
+  		width: 750px; 
+
+  		h3{
+  			font-family: 'SourceHanSansCN-Normal', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+		    font-weight: 400;
+		    font-style: normal;
+		    font-size: 20px;
+		    color: #888888;
+		    padding: 10px 0px 20px;
+  		}
+
+  		span{
+  			font-family: 'SourceHanSansCN-Normal', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+		    font-weight: 400;
+		    font-style: normal;
+		    font-size: 14px;
+		    color: #888888;
+		    padding: 10px 40px 0px;
+  		}
+
+  		td{
+  			border-bottom: 1px solid #C9C9C9; 
+
+  			button{
+  				width: 170px;
+    			height: 30px;
+  				background-color: rgba(136, 136, 136, 1);
+			    border: none;
+			    border-radius: 10px;
+			    box-shadow: none;
+			    font-family: 'SourceHanSansCN-Bold', 'Source Han Sans CN Bold', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+			    font-weight: 700;
+			    font-style: normal;
+			    font-size: 16px;
+			    color: #FFFFFF;
+  			}
+
+  			.first{
+  				margin-left: 40px;
+  			}
+  		}
+  		
+  		table{
+  			width: 90%;
+  			margin: auto;
+  		}
+  	}
+
+  	.content-right{
+  		position: absolute;
+  		right: 40px;
+  		top: 90px;
+  		bottom: 10px;
+  		width:180px;
+  		text-align: center;
+  		
+  		button{
+  			width: 120px;
+    		height: 30px;
+  			border: none;
+		    border-radius: 10px;
+		    box-shadow: none;
+		    background-color: rgba(242, 189, 14, 1);
+		    font-family: 'SourceHanSansCN-Normal', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+		    font-weight: 400;
+		    font-style: normal;
+		    font-size: 16px;
+		    color: #FFFFFF;
+		    margin-top: 30px;
+  		}
+
+  		.close{
+  			background-color: rgba(219, 80, 60, 1);
+  		}
+  	}
+  }
+}

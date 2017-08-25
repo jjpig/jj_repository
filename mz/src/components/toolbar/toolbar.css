@@ -1,0 +1,24 @@
+.mz-tool-bar {
+  border-top: 1px solid #C2C3C3;
+  height: 70px;
+  width: 100%;
+}
+.mz-tool-bar ul {
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+  width: 450px;
+  height: 70px;
+  line-height: 70px;
+  overflow: hidden;
+}
+.mz-tool-bar ul li {
+  float: left;
+  margin: 0 20px;
+}
+.mz-tool-bar ul li div {
+  padding-top: 11px;
+}
+.mz-tool-bar ul li div img {
+  cursor: pointer;
+}

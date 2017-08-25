@@ -1,0 +1,63 @@
+ .content--base {
+    position: relative;
+    overflow: hidden;
+    background-color: #CCCCCC;
+ 
+    .base__video{
+        position: absolute;
+        width: 15%;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .controls {
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 0.8rem;
+        color: white;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .55);
+        display: -webkit-flex;
+        display: flex;
+
+        .progressBar {
+            margin: .75rem 5%;
+            position: relative;
+            width: 90%;
+            height: .5rem;
+            background-color: rgba(200, 200, 200, .55);
+            border-radius: 10px;
+        }
+
+        .timeBar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(99, 110, 225, .85);
+            border-radius: 10px;
+        }
+    }
+
+    .controls>* {
+        flex: 1;
+    }
+    .controls>*:nth-child(1) {
+        flex: 6;
+    }
+
+    .controls>*:nth-child(2) {
+        flex: 2;
+        text-align: center;
+    }
+
+}
+
+        
