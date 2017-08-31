@@ -6,7 +6,8 @@
           <img src="./avatar.png" alt="">
         </div>
         <div class="info-box">
-          <p>当前用户：簇桥前台 [ 簇桥街道 ]</p>
+          <!-- <p>当前用户：簇桥前台 [ 簇桥街道 ]</p> -->
+          <p v-model="name">当前用户：{{name}}</p>
           <p>
             <span>等级 : ✭ ✭</span>
             <span>注销</span>
@@ -24,6 +25,7 @@
         v-bind:key="index"
         :info="i"
         :index="index"
+        :items="items"
         @hideAllDetail="hideAllDetail"
         :contentHeight="contentHeight"></mz-handleBox>
     </div>
@@ -42,39 +44,46 @@
   import handle from './components/handle';
 
   export default {
+    
     data () {
         return {
           //  导航部分高度
           handleBoxHeight: 0,
           //  导航各项内容高度
           contentHeight: 0,
-          //  初始化各个导航组件基本信息
+          //  初始化各个导航组件基本信息 事务导航 个人统计 我的信息 台账导航
           navInfo: [
             {
               icon: require('./components/u106.png'),
-              title: '事务导航'
+              title: ''
             },
             {
               icon: require('./components/u115.png'),
-              title: '个人统计'
+              title: ''
             },
             {
               icon: require('./components/u122.png'),
-              title: '我的信息'
+              title: ''
             },
             {
               icon: require('./components/u131.png'),
-              title: '台账导航'
+              title: ''
             }
           ],
-          isShowDetail: false
+          isShowDetail: false,
+          name: '',
+          items:[
+            {},{},{},{},{},{},
+          ]
         }
     },
+
     methods: {
       hideAllDetail () {
 
-      }
+      },
     },
+
     mounted () {
       //  动态计算handle box区域高度
       let height = this.$refs.leftList.getBoundingClientRect().height;
@@ -85,8 +94,37 @@
       //  动态计算各项内容可显示的高度
       let contentHeight = handleBoxHeight - 240;
       this.contentHeight = contentHeight;
+      this.name = localStorage.name;
+      //console.log(this.$store.state.user.name);
 
+      var _this = this;
+
+      //菜单列表
+        this.$http.post('/menu/queryMenuList?parentId='+localStorage.id+'&token='+ _this.$store.state.token
+        )
+        .then(res => {
+          for (let i = 0; i <= res.data.data.length; i++) {
+            _this.navInfo[i].title = res.data.data[i].name;
+          }
+          console.log(res);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+
+      //事务导航窗口
+        this.$http.post('/menu/affairNavigation?token='+ _this.$store.state.token)
+        .then(res => {
+          console.log(res.data.data.length);
+          for (let i = 0; i < res.data.data.length; i++) {
+            _this.items[i].title = res.data.data[i].name;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
     },
+
     components: {
         mzSearchBox: searchbox,
         mzUploadBox: upload,

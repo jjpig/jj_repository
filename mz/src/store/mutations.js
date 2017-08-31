@@ -55,6 +55,22 @@ let mutations = {
       // 事务导航
       case 'showSimpleGuide':
            state.isShowSimpleGuide = true;
+           break;
+      // 档案
+      case 'record':
+           state.isShowRecord = true;
+           break;
+      // 打印向导
+      case 'printGuide':
+           state.isShowPrintGuide = true;
+           break;
+      // 打印存根等
+      case 'printContent':
+           state.isShowPrintContent = true;
+           break;
+      case 'quickReply':
+           state.isShowQuickReply = true;
+           break;
     }
   },
 
@@ -66,6 +82,10 @@ let mutations = {
     state.isShowPhoto = false;
     state.isShowAutoTable = false;
     state.isShowSimpleGuide = false;
+    state.isShowRecord = false;
+    state.isShowPrintGuide = false;
+    state.isShowPrintContent = false;
+    state.isShowQuickReply = false;
   },
 
   /**
@@ -79,18 +99,40 @@ let mutations = {
     switch (payload.name) {
       //  请输入账号密码
       case 'nameOrPwdNull':
-          state.isShowServiceGuide = true;
+          state.isShowLoginError = true;
           break;
       // 用户名或密码错误
       case 'nameOrPwdError':
-          state.isShowResidentDetailInfo = true;
+          state.isShowLoginError = true;
           break;
     }
   },
 
   closeError( state ){
     state.isShowLoginError = false;
-  }
+  },
+
+  SET_USER(state, user){
+    state.user = user;
+    localStorage.name = user.name;
+    state.token = user.token;
+    localStorage.token = user.token;
+    localStorage.id = user.id;
+  },
+
+  SET_TOKEN(state, token){
+    state.token = token;
+  },
+
+  SET_AFFAIRTYPEID(state, affairTypeId){
+    state.affairTypeId = affairTypeId;
+  },
+  LOGOUT(){
+    state.user = '';
+    localStorage.name = '';
+    localStorage.token = '';
+    localStorage.id = '';
+  },
 }
 export default mutations;
 

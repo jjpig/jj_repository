@@ -11,7 +11,7 @@
         <div class="input-box">
           <input type="text" class="name" placeholder="用户名" v-model.trim="loginName">
             <br/>
-          <input type="password" class="pwd" placeholder="密码" v-model.trim="loginPwd">
+          <input type="password" class="pwd" placeholder="密码" v-model.trim="password">
         </div>
         <button @click="login">登陆</button>
       </div>
@@ -24,13 +24,14 @@
 
 <script>
   import mzError from './components/error'
-
+  import axios from 'axios';
+  import qs from 'qs';
   export default {
     name: 'login',
     data () {
       return {
         loginName: '',
-        loginPwd: '',
+        password: '',
       }
     },
     computed: {
@@ -41,18 +42,48 @@
     methods: {
         login () {
             //  登陆接口，登陆成功后，跳转到home主页
-            console.log(this.loginName);
-
-            if(this.loginName == '' || this.loginPwd == ''){
+            // console.log(this.loginName);
+            var _this = this;
+            var params = {
+              loginName : _this.loginName,
+              //password : _this.password
+              password: '63a9f0ea7bb98050796b649e85481845'
+            };
+            // 
+            if(_this.loginName == '' || _this.password == ''){
               // alert("请输入用户名和密码");
-              this.$store.commit({
+              _this.$store.commit({
                 type: 'showError',
                 name: 'nameOrPwdNull',
                 title: '请输入用户名和密码'
               });
               return false;
+
+            }else{
+              this.$http.post('/user/login',qs.stringify(params))
+              .then(res => {
+                  //console.log(res);
+                  if(res.data.success == true){
+                    _this.$store.commit('SET_USER',res.data.data);
+                    console.log(_this.$store.state.token);
+
+                    _this.$router.push('/home');
+                  }else{
+                    _this.$store.commit({
+                      type: 'showError',
+                      name: 'nameOrPwdError',
+                      title: res.data.msg
+                    });
+                  }
+                }).catch(error => {
+                  console.log(error);
+                  _this.$store.commit({
+                    type: 'showError',
+                    name: 'nameOrPwdError',
+                    title: error
+                  });
+                });
             }
-            this.$router.push('home');
         }
     },
     components:{

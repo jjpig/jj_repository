@@ -1,10 +1,10 @@
-<template>
+x<template>
 	<div class="guide">
 		<p>您可以进行一下操作</p>	
 		<div class="button-area">
-			<button @click="register" class="register">咨询登记</button><br/>
-			<button @click="print" class="print">打印报告</button><br/>
-			<button @click="back" class="back">返回首页</button>
+			<button @click="register" class="register"><img src="./u476.png" width="18px">咨询登记</button><br/>
+			<button @click="print" class="print"><img src="./u478.png" width="18px">打印报告</button><br/>
+			<button @click="back" class="back"><img src="./u480.png" width="18px">返回首页</button>
 		</div>
 	</div>
 </template>
@@ -26,6 +26,7 @@
 			},
 
 			back(){
+				this.$store.commit('hidePopud');
 				this.$router.push('currentBus');
 			}
 		}

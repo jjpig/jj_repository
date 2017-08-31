@@ -1,9 +1,15 @@
 <template>
   <div class="currentBus">
+
+    <div class="mz-distributePie">
+      <mz-distributePie></mz-distributePie>
+    </div>
+
     <div class="mz-trendLine">
       <mz-trendLine ref="trendLine"></mz-trendLine>
     </div>
-    <div class="table-location">
+    
+    <div class="table-location" >
       <div class="table-header">
         <span class="name">当前已处理的事务</span>
         <span class="count">1</span>
@@ -38,7 +44,16 @@
               <button>详细</button>
             </td>
           </tr>
-          
+          <tr class="content-row">
+            <td>王某某</td>
+            <td>f9sdfj2938fjj923f</td>
+            <td>《独生子女父母光荣证》遗失补办</td>
+            <td>2017/8/20</td>
+            <td>已办结</td>
+            <td>
+              <button>详细</button>
+            </td>
+          </tr>
         </table>
       </div>
     </div>
@@ -79,6 +94,7 @@
 
 <script>
 import mzTrendLine from './components/trendLine'
+import mzDistributePie from './components/distributePie'
   export default {
       data () {
           return {
@@ -87,7 +103,8 @@ import mzTrendLine from './components/trendLine'
       },
 
       components: {
-        mzTrendLine
+        mzTrendLine,
+        mzDistributePie
       }
   }
 </script>

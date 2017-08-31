@@ -1,5 +1,10 @@
 <template>
-	<div id="myChart" :style="{width: '500px', height: '270px'}"></div>
+	<div>
+		<div class="title">
+			<p>本月受理趋势</p>
+		</div>
+		<div id="myChart" :style="{width: '100%', height: '295%'}"></div>
+	</div>
 </template>
 
 <script type="text/javascript">
@@ -22,23 +27,8 @@
 		        let myChart = this.$echarts.init(document.getElementById('myChart'))
 		        // 绘制图表
 		        myChart.setOption({
-		        	// 标题
-		            title: { 
-		            	text: '本月受理趋势',
-		            	textStyle: {
-		            		fontFamily: 'SourceHanSansCN-Medium,Source Han Sans CN Medium,Source Han Sans CN Normal,Source Han Sans CN',
-						    fontWeight: 500,
-						    fontStyle: 'normal',
-						    fontSize: 20,
-						    color: '#FFFFFF',
-						    lineHight: 50
-		            	},
-		            	backgroundColor: '#4d73eb',
-		            },
 
-		            // 工具条
-		            tooltip: {},
-
+		        	tooltip:{},
 		            // 坐标轴
 		            xAxis: {
 		            	boundaryGap: false,
@@ -62,6 +52,7 @@
 		            series: [{
 		                name: '受理人数',
 		                type: 'line',
+
 		                itemStyle: {
 		                	normal: {
 		                		areaStyle: {
@@ -96,4 +87,26 @@
 	}
 </script>
 
-<style scoped src=""></style>
+<style type="text/css" scoped>
+	.title{
+		position: absolute;
+		top: -10px;
+		text-align: center;
+		width: 100%;
+		height: 30px;
+		background-color: rgba(77, 115, 235, 1);
+	    border: none;
+	    border-radius: 15px;
+	    box-shadow: none;
+	    font-family: 'SourceHanSansCN-Medium', 'Source Han Sans CN Medium', 'Source Han Sans CN Normal', 'Source Han Sans CN';
+	    font-weight: 500;
+	    font-style: normal;
+	    font-size: 20px;
+	    color: #FFFFFF;
+	}
+
+	#myChart{
+		margin-top: 10px;
+		height: 500px;
+	}
+</style>

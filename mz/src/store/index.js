@@ -4,6 +4,7 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 import mutatioins from './mutations';
+import getters from './getters';
 
 Vue.use(Vuex)
 
@@ -33,9 +34,25 @@ const store = new Vuex.Store({
     // 显示事务导航
     isShowSimpleGuide: false,
     // 显示登陆错误提示框
-    isShowLoginError: false
+    isShowLoginError: false,
+    // 显示档案
+    isShowRecord: false,
+    // 显示打印向导
+    isShowPrintGuide: false,
+    // 显示打印存根等
+    isShowPrintContent: false,
+    // 显示快捷回复
+    isShowQuickReply: false,
+
+    user : '',
+    token: '',
+    
+    // 事务类型ID
+    affairTypeId: '',
   },
-  mutations: mutatioins
+
+  getters: getters,
+  mutations: mutatioins,
 });
 
 export default store;

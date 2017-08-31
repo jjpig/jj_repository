@@ -34,6 +34,7 @@
 }
 .content-box {
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 300px;
   ul {
     list-style: none;
@@ -54,6 +55,34 @@
       }
     }
   }
+}
+
+.sencond-box{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 200px;
+  ul {
+    list-style: none;
+  }
+  background: #3C4B64;
+  color: #fff;
+  h2 {
+    line-height: 60px;
+  }
+  .content {
+    width: 260px;
+    margin: 0 auto;
+    ul {
+      padding-bottom:20px;
+      li {
+        margin: 15px 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.sencond-box::-webkit-scrollbar {
+  display: none !important;
 }
 .active {
   color: #8099E4;

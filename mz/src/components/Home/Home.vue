@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <mz-header ref="header"></mz-header>
-    <div class="mz-body clearfix">
+    <div class="mz-body">
       <mz-leftList :style="{ height: h + 'px' }" class="mz-left-list"></mz-leftList>
       <div :style="{ width: w + 'px', height: h + 'px'}" class="mz-right-content">
         <mz-content :style="{ height: contentHeight + 'px'}"></mz-content>
@@ -24,7 +24,7 @@
   //  工具栏组件
   import toolbar from '../toolbar/toolbar';
   //  弹出框组件
-  import popup from '../popup/Popup'
+  import popup from '../popup/Popup';
 
   export default {
     name: 'home',
@@ -32,20 +32,23 @@
         return {
           h: 0,
           w: 0,
-          contentHeight: 0
+          contentHeight: 0,
         }
     },
+
     computed: {
         isShowPop () {
             return this.$store.state.isShowPop
-        }
+        },
     },
+    
     beforeMount () {
         this.h = document.body.clientHeight - 100;
         this.w = document.body.clientWidth - 300;
         this.contentHeight = document.body.clientHeight - 100 - 70;
     },
-    components: {
+
+    components:{
       mzHeader: header,
       mzLeftList: leftList,
       mzContent: content,
