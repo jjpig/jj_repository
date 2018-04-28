@@ -20,7 +20,7 @@ public class Pairs {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
-
+        sc.close();
         if(k > n - 1 || n > 100000){
             System.out.println(0);
         }
